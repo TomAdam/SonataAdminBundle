@@ -896,6 +896,14 @@ abstract class Admin implements AdminInterface, DomainObjectInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getSubjectClass()
+    {
+        return $this->getSubject() ? get_class($this->getSubject()) : $this->getClass();
+    }
+
+    /**
      * Returns the list of supported sub classes
      *
      * @return array the list of sub classes

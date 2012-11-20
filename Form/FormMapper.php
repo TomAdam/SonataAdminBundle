@@ -117,7 +117,7 @@ class FormMapper
         }
 
         $fieldDescription = $this->admin->getModelManager()->getNewFieldDescriptionInstance(
-            $this->admin->getClass(),
+            $this->admin->getSubjectClass(),
             $name instanceof FormBuilder ? $name->getName() : $name,
             $fieldDescriptionOptions
         );
